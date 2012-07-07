@@ -1,0 +1,42 @@
+@import "elements";
+
+@font-face {
+    font-family: 'RegloBold';
+    src: url('reglo-bold-webfont.eot');
+    src: url('reglo-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('reglo-bold-webfont.woff') format('woff'),
+         url('reglo-bold-webfont.ttf') format('truetype'),
+         url('reglo-bold-webfont.svg#RegloBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+html, body, #map_canvas {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.kvak-ui {
+    z-index: 1000;
+    position: fixed;
+    top: 22px;
+    padding: 8px;
+    .rounded(5px);
+    .opacity(0.6);
+    background-color: #ccc;
+    font-family: 'RegloBold';
+    font-weight: 'bold';
+    font-size: 128px;
+    line-height: 128px;
+//    visibility: hidden;
+}
+
+#kvak-logotype {
+    left: 10%;
+}
+
+#kvak-about {
+    left: 83%;
+}

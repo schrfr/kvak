@@ -16,7 +16,8 @@
         var myOptions = {
           zoom: 13,
           center: new google.maps.LatLng(67.72694, -164.53333),
-          mapTypeId: google.maps.MapTypeId.SATELLITE
+          mapTypeId: google.maps.MapTypeId.SATELLITE,
+          disableDefaultUI: true
         };
         map = new google.maps.Map(document.getElementById('map_canvas'),
             myOptions);
@@ -27,8 +28,8 @@
   </head>
   <body>
     <div id="map_canvas"></div>
-    <div id="kvak-logotype" class="kvak-ui">KVAK TV</div>
-    <div id="kvak-about-trigger" class="kvak-ui">?</div>
+    <div id="kvak-logotype" class="kvak-ui persistent">KVAK TV</div>
+    <div id="kvak-about-trigger" class="kvak-ui persistent">?</div>
     <div id="kvak-about" class="kvak-ui">
       <p>
         Kivalina is a town of about 400 inhabitants in the remote North Western part of Alaska.
@@ -46,8 +47,8 @@
         KVAK TV is providing an alternative platform for the youth to voice their ideas about the relocation and when it happens, a way to document it.
       </p>
     </div>
-    <div id="kvak-login-trigger" class="kvak-ui">Login</div>
-    <div id="kvak-upload-trigger" class="kvak-ui">Upload</div>
+    <div id="kvak-login-trigger" class="kvak-ui persistent">Login</div>
+    <div id="kvak-upload-trigger" class="kvak-ui persistent">Upload</div>
     <div id="kvak-login" class="kvak-ui">
       <form action="#" method="post" enctype="multipart/form-data" onsubmit="return false">
         <label for="username">Username</label>

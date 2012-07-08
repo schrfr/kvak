@@ -1,6 +1,10 @@
 var showControls = function() {
-    $(".kvak-ui").visibility("visible")
+    $(".kvak-ui.persistent").fadeIn()
 };
+
+var hideControls = function() {
+    $(".kvak-ui.persistent").hide()
+}
 
 var showAbout = function() {
     $("#kvak-about").show();
@@ -35,4 +39,30 @@ $("#kvak-about").click(function(e) {
   hideAbout();
 });
 
-hideAbout(); hideLogin();
+
+hideAbout(); hideLogin(); hideControls();
+
+// opening
+
+setTimeout(
+    function() {
+        map.setZoom(14);
+        setTimeout(
+            function() {
+                map.setZoom(15);
+                setTimeout(
+                    function() {
+                        map.setZoom(16);
+                        setTimeout(
+                            showControls,
+                            1600
+                        )
+                     },
+                     1600
+                );
+             },
+            1600
+        );
+    },
+    1600
+);

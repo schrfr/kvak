@@ -6,41 +6,32 @@ var hideControls = function() {
     $(".kvak-ui.persistent").hide()
 }
 
-var showAbout = function() {
-    $("#kvak-about").show();
+var hideOtherScreenElements = function() {
+    $(".kvak-ui.specific").hide();
 }
-
-var hideAbout = function() {
-    $("#kvak-about").hide();
-}
-
-var showLogin = function() {
-    $("#kvak-login").show();
-}
-
-var hideLogin = function() {
-    $("#kvak-login").hide();
-}
-
-$("#kvak-about-trigger").click(function(e) {
-  showAbout();
-});
-
-$("#kvak-login-trigger").click(function(e) {
-  showLogin();
-});
 
 $("#map_canvas").click(function(e) {
-  hideLogin();
-  hideAbout();
+    hideOtherScreenElements();
 });
 
-$("#kvak-about").click(function(e) {
-  hideAbout();
+$(".kvak-ui.specific").click(function(e) {
+    hideOtherScreenElements();
+});
+
+$(".kvak-ui.trigger").click(function(e) {
+    var target = $('#' + $(this).attr("rel"))
+
+    if( target.is(":visible") ) {
+        target.hide();
+    }
+    else {
+        hideOtherScreenElements();
+        target.show();
+    }
 });
 
 
-hideAbout(); hideLogin(); hideControls();
+hideOtherScreenElements(); hideControls();
 
 // opening
 
@@ -66,3 +57,4 @@ setTimeout(
     },
     1600
 );
+

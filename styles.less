@@ -1,4 +1,7 @@
-@import "elements";
+@import "variables";
+@import "mixins";
+@import "progress-bars";
+@import "sprites";
 
 .left (@n) {
     left: 10%;
@@ -47,8 +50,8 @@ html, body, #map_canvas {
     position: fixed;
     .top(1);
     padding: 8px;
-    .rounded(5px);
-    .opacity(0.6);
+    .border-radius(5px);
+    .opacity(60);
     background-color: #ccc;
     font-family: 'RegloBold';
     font-weight: 'bold';

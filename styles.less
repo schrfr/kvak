@@ -1,3 +1,4 @@
+@import "reset";
 @import "variables";
 @import "mixins";
 @import "progress-bars";
@@ -42,6 +43,12 @@ html, body, #map_canvas {
     height: 100%;
 }
 
+body {
+    line-height: 22px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, 'Free Sans';
+}
+
 .kvak-ui {
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -53,8 +60,6 @@ html, body, #map_canvas {
     .border-radius(5px);
     .opacity(60);
     background-color: #ccc;
-    font-family: 'RegloBold';
-    font-weight: 'bold';
     font-size: 16px;
     line-height: 20px;
 //    visibility: hidden;
@@ -65,58 +70,98 @@ html, body, #map_canvas {
   line-height: 20px;
 }
 
+.kvak-ui label, #kvak-logotype, .trigger, input[type="submit"] {
+    font-family: 'RegloBold';
+    font-weight: 'bold';
+    text-transform: uppercase;
+}
+
 .kvak-ui label {
-    .width(1);
+    .width(2);
     display: inline-block;
 }
 
+.kvak-ui input {
+    .width(3);
+    .height(2);
+    margin-bottom: 28px;
+}
+
+.kvak-ui input[type="submit"] {
+    .border-radius(28px);
+}
+
+.kvak-ui progress, .kvak-ui .progress , .kvak-ui .progress .bar {
+    .height(4);
+}
+
 #kvak-logotype {
-  left: 10%;
+  left: 28px;
   font-size: 128px;
-  line-height: 128px;
+  line-height: 125px;
   .height(4);
 }
 
 #kvak-about-trigger {
     font-size: 128px;
-    line-height: 128px;
-    .width(2);
+    line-height: 125px;
+//    .width(2);
     .height(4);
-    .left(10);
+//    .left(10);
+    right: 28px;
+}
+
+#kvak-button-group {
+    position: fixed;
+    left: 28px;
+    bottom: 28px;
 }
 
 #kvak-login-trigger {
+    position: static;
     top: inherit;
-    bottom: 22px;
-    .left(0);
-    .width(2);
+    float: left;
+//    bottom: 22px;
+//    .left(0);
+//    .width(2);
     .height(1);
 }
 
 #kvak-upload-trigger {
+    position: static;
     top: inherit;
-    bottom: 22px;
-    .width(2);
+    float: left;
+    margin-left: 28px;
+//    bottom: 22px;
+//    .width(2);
     .height(1);
-    .left(2);
+//    .left(2);
+}
+
+#kvak-about, #kvak-upload {
+    overflow-y: auto;
 }
 
 #kvak-about {
     .top(6);
     .width(8);
-    .left(2);
+//    .left(2);
+    right: 28px;
     .bottom(3);
 }
 
 #kvak-login {
-    .top(8);
+    .top(6);
     .width(4);
-    .left(4);
+//    .left(4);
+    right: 28px;
 }
 
 #kvak-upload {
     .top(6);
     .width(6);
-    .left(6);
+//    .left(6);
+    right: 28px;
+    .bottom(4);
 }
 

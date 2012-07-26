@@ -11,11 +11,39 @@ function initialize() {
   map = new google.maps.Map(document.getElementById('map_canvas'),
 myOptions);
 
-  var myLatlng = new google.maps.LatLng(67.72694, -164.53333);
-  uploadMarker = new google.maps.Marker({
-    position: myLatlng,
+/*
+  De video’s worden op de kaart geplot. Deze posities zullen in de uiteindelijke site
+  waarschijnlijk uit de database komen? Als er een effectievere methode is dan het plaatsen
+  van marker’s dan is het natuurlijk ook goed.
+*/
+
+  testVideo1 = new google.maps.Marker({
+    position: new google.maps.LatLng(67.7268017401174, -164.5453462963867),
     map: map,
-    title:"Hello World!",
+    icon: "kvak1-a.png" 
+  });
+
+  testVideo2 = new google.maps.Marker({
+    position: new google.maps.LatLng(67.72463827351035, -164.53508952911375),
+    map: map, 
+    icon: "kvak2-a.png" 
+  }); 
+
+  testVideo3 = new google.maps.Marker({
+    position: new google.maps.LatLng(67.72984326937491, -164.5400677090454),
+    map: map, 
+    icon: "kvak3-a.png" 
+  }); 
+
+/* 
+   Deze draggable marker zou je kunnen gebruiken om in het uploadproces
+   de geolocatie in de stellen.
+   je leest de positie af met uploadMarker.getPosition.toString()
+*/
+
+  uploadMarker = new google.maps.Marker({
+    position: new google.maps.LatLng(67.72924150075268, -164.54721311386106),
+    map: map,
     draggable: true,
     visible: false
   });
@@ -89,4 +117,3 @@ setTimeout(
     },
     1600
 );
-

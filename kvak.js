@@ -117,11 +117,11 @@ $("#kvak-logotype").click(function(e) {
 });
 
 $("#kvak-isolation-trigger").click(function(e) {
-    $(".kvak-ui").not("#kvak-channel-group div").css("background-image", "url(tv-red.png)")
+    $(".kvak-ui").not("#kvak-channel-group div").css("background-image", "url(tv-yellow.png)")
 });
 
 $("#kvak-being-young-trigger").click(function(e) {
-    $(".kvak-ui").not("#kvak-channel-group div").css("background-image", "url(tv-green.png)")
+    $(".kvak-ui").not("#kvak-channel-group div").css("background-image", "url(tv-pink.png)")
 });
 
 $("#kvak-tradition-trigger").click(function(e) {
@@ -129,7 +129,7 @@ $("#kvak-tradition-trigger").click(function(e) {
 });
 
 $("#kvak-relocation-trigger").click(function(e) {
-    $(".kvak-ui").not("#kvak-channel-group div").css("background-image", "url(tv-purple.png)")
+    $(".kvak-ui").not("#kvak-channel-group div").css("background-image", "url(tv-green.png)")
 });
 
 hideOtherScreenElements();  hideControls();

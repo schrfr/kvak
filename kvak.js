@@ -1,5 +1,6 @@
 var map;
 var uploadMarker;
+var testVideo1, testVideo1, testVideo3;
 
 function initialize() {
   var myOptions = {
@@ -35,6 +36,24 @@ myOptions);
     icon: "kvak3-a.png" 
   }); 
 
+/* Even vlug wat JavaScript om de mockup video te laten zien */
+
+  google.maps.event.addListener(testVideo1, 'click', function() {
+    hideOtherScreenElements();
+    $("#kvak-video").show();
+});
+
+google.maps.event.addListener(testVideo2, 'click', function() {
+    hideOtherScreenElements();
+    $("#kvak-video").show();
+});
+
+google.maps.event.addListener(testVideo3, 'click', function() {
+    hideOtherScreenElements();
+    $("#kvak-video").show();
+});
+
+
 /* 
    Deze draggable marker zou je kunnen gebruiken om in het uploadproces
    de geolocatie in de stellen.
@@ -50,8 +69,16 @@ myOptions);
 
 }
 
+/* initialisatie van de kaart */
+
 google.maps.event.addDomListener(window, 'load', initialize);
 
+/*
+  Deze JavaScript is allemaal niet zo relevant,
+  in de mockup showt en hidet het de pagina-onderdelen
+  maar in de uiteindelijke versie zal dat waarschijnlijk via
+  losse pagina’s gaan?
+*/
 
 var showControls = function() {
     $(".kvak-ui.persistent").fadeIn()
@@ -82,6 +109,7 @@ $(".kvak-ui.trigger").click(function(e) {
         }
     }
 });
+
 
 $("#kvak-logotype").click(function(e) {
     hideOtherScreenElements();

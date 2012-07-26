@@ -4,7 +4,7 @@ var testVideo1, testVideo1, testVideo3;
 
 function initialize() {
   var myOptions = {
-    zoom: 13,
+    zoom: 15,
     center: new google.maps.LatLng(67.72694, -164.53333),
     mapTypeId: google.maps.MapTypeId.SATELLITE,
     disableDefaultUI: true
@@ -132,9 +132,17 @@ $("#kvak-relocation-trigger").click(function(e) {
     $(".kvak-ui").not("#kvak-channel-group div").css("background-image", "url(tv-green.png)")
 });
 
-hideOtherScreenElements();  hideControls();
+hideOtherScreenElements();
 
 // opening
+
+/* 
+  Aanvankelijk was er een soort Enemy of the State achtige openiningsanimatie
+  waarbij op de kaart wordt ingezoemd.
+ */
+
+/*
+hideControls();
 
 setTimeout(
     function() {
@@ -158,3 +166,4 @@ setTimeout(
     },
     1600
 );
+*/

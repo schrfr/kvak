@@ -85,6 +85,23 @@ $(".kvak-ui.trigger").click(function(e) {
 
 $("#kvak-logotype").click(function(e) {
     hideOtherScreenElements();
+    $(".kvak-ui").not("#kvak-channel-group div").css("background-image", "url(tv2.png)")
+});
+
+$("#kvak-isolation-trigger").click(function(e) {
+    $(".kvak-ui").not("#kvak-channel-group div").css("background-image", "url(tv-red.png)")
+});
+
+$("#kvak-being-young-trigger").click(function(e) {
+    $(".kvak-ui").not("#kvak-channel-group div").css("background-image", "url(tv-green.png)")
+});
+
+$("#kvak-tradition-trigger").click(function(e) {
+    $(".kvak-ui").not("#kvak-channel-group div").css("background-image", "url(tv-blue.png)")
+});
+
+$("#kvak-relocation-trigger").click(function(e) {
+    $(".kvak-ui").not("#kvak-channel-group div").css("background-image", "url(tv-purple.png)")
 });
 
 hideOtherScreenElements();  hideControls();

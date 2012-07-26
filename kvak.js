@@ -68,14 +68,6 @@ var hideOtherScreenElements = function() {
     }
 }
 
-$("#map_canvas").click(function(e) {
-    hideOtherScreenElements();
-});
-
-$(".kvak-ui.specific").click(function(e) {
-    hideOtherScreenElements();
-});
-
 $(".kvak-ui.trigger").click(function(e) {
     var target = $('#' + $(this).attr("rel"))
 
@@ -89,6 +81,10 @@ $(".kvak-ui.trigger").click(function(e) {
             uploadMarker.setVisible(true);
         }
     }
+});
+
+$("#kvak-logotype").click(function(e) {
+    hideOtherScreenElements();
 });
 
 hideOtherScreenElements();  hideControls();

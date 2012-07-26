@@ -18,6 +18,12 @@
   <body>
     <div id="map_canvas"></div>
     <div id="kvak-logotype" class="kvak-ui persistent">KVAK TV</div>
+    <div id="kvak-channel-group">
+      <div class="kvak-ui">Isolation</div>
+      <div class="kvak-ui">Being Young in Kivalina</div>
+      <div class="kvak-ui">Tradition</div>
+      <div class="kvak-ui">Relocation</div>
+    </div>
     <div id="kvak-about-trigger" class="kvak-ui persistent trigger" rel="kvak-about">?</div>
     <div id="kvak-about" class="kvak-ui specific">
       <p>
@@ -46,7 +52,7 @@
         <input type="text" id="username" name="username" />
         <label for="password">Password</label>
         <input type="password" id="password" name="password" placeholder="Alphanumeric123!" />
-        <p style="text-align:center;"><input type="submit" value="Login" /></p>
+        <p class="center"><input type="submit" value="Login" /></p>
       </form>
     </div>
     <div id="kvak-upload" class="kvak-ui specific">
@@ -57,15 +63,20 @@
           <div class="bar"
             style="width: 20%;">22%</div>
         </div>
-        <p style="text-align: center;"><input type="submit" value="Choose Files" /></p><br/>
-        <label for="username">Creators</label>
-        <input type="text" id="username" name="username" /><br/>
-        <label for="password">Actors</label>
-        <input type="password" id="password" name="password" placeholder="Alphanumeric123!" /><br/>
-        <label for="username">When</label>
-        <input type="text" id="username" name="username" /><i class="icon-calendar"></i><br/>
-        <label for="username">Creators</label>
-        <input type="text" id="username" name="username" /><br/>
+        <p class="center"><input type="submit" value="Choose Files" /></p>
+        <label for="creators">Creators</label>
+        <input type="text" id="creators" name="creators" /><br/>
+        <label for="actors">Actors</label>
+        <input type="text" id="actors" name="actors" /><br/>
+        <label for="date">When</label>
+        <input type="text" id="date" name="date" /><i class="icon-calendar"></i><br/>
+        <label for="select_channel">Channel</label>
+        <select id="select_channel" name="select_channel">
+          <option value="isolation">Isolation</option>
+          <option value="being-young">Being Young in Kivalina</option>
+          <option value="tradition">Tradition</option>
+          <option value="relocation">Relocation</option>
+        </select>
       </form>
     </div>
     <script src="kvak.js"></script>

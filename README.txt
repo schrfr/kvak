@@ -100,5 +100,7 @@ wordt bij de film, maar op termijn kunnen hier ook views bij komen.
 Het zou mooi zijn als bij het opgegeven van namen er een type-ahead functie komt
 die eerder opgegeven namen suggereert.
 
+Bij When geef je een datum toe via een date picker
+
 Idealiter kan de gebruiker de upload beginnen en tegelijkertijd de metadata invullen
 (cf bv Vimeo).
